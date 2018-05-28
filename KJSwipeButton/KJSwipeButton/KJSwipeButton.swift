@@ -79,13 +79,47 @@ class KJSwipeButton: UIView {
         self.init()
     }
     
-    func setUIForSwitch(){
-      
-        
-    }
+    
     
     required init?(coder aDecoder: NSCoder) {
-         super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
+        self.setStateOfView()
+    }
+    
+    func setStateOfView(){
+        
+        //Create view
+        self.switchView = UIView()
+        self.switchThumb = UIView()
+        
+        //Set Frame Of Switch View
+        self.switchView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+        if isOn {
+            self.switchThumb.frame = CGRect(x: 0, y: 0, width: self.switchView.frame.size.height, height: self.switchView.frame.size.height)
+        }else{
+            self.switchThumb.frame = CGRect(x: self.switchView.frame.size.width - self.switchView.frame.size.height, y: 0, width: self.switchView.frame.size.height, height: self.switchView.frame.size.height)
+        }
+        
+        //Set Corner Radius
+        self.switchView.layer.cornerRadius = self.switchView.frame.height / 2
+        self.switchThumb.layer.cornerRadius = self.switchThumb.frame.height / 2
+        
+        //Set Clip to bound
+        self.switchView.clipsToBounds = true
+        self.switchThumb.clipsToBounds = true
+        
+        //add View
+        self.switchView.addSubview(self.switchThumb)
+        self.addSubview(self.switchView)
+        
+        //Pan GestureRecognizer
+        self.panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan(recognizer:)))
+        self.switchThumb.addGestureRecognizer(self.panGestureRecognizer)
+        
+        
+        //Tap GestureRecognizer
+        self.tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(recognizer:)))
+        self.switchView.addGestureRecognizer(self.tapGestureRecognizer)
     }
     
 //    convenience init(isOn:Bool){
