@@ -14,6 +14,7 @@
 		F7E3621320BC0953001C53E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E3621120BC0953001C53E1 /* LaunchScreen.storyboard */; };
 		F7E3621E20BC0953001C53E1 /* KJSwipeButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E3621D20BC0953001C53E1 /* KJSwipeButtonTests.swift */; };
 		F7E3622920BC0953001C53E1 /* KJSwipeButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E3622820BC0953001C53E1 /* KJSwipeButtonUITests.swift */; };
+		F7E3623720BC0A3E001C53E1 /* KJSwipeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E3623620BC0A3E001C53E1 /* KJSwipeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F7E3622420BC0953001C53E1 /* KJSwipeButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJSwipeButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E3622820BC0953001C53E1 /* KJSwipeButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KJSwipeButtonUITests.swift; sourceTree = "<group>"; };
 		F7E3622A20BC0953001C53E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7E3623620BC0A3E001C53E1 /* KJSwipeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KJSwipeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				F7E3620820BC094D001C53E1 /* AppDelegate.swift */,
 				F7E3620A20BC094D001C53E1 /* ViewController.swift */,
+				F7E3623620BC0A3E001C53E1 /* KJSwipeButton.swift */,
 				F7E3620C20BC094D001C53E1 /* Main.storyboard */,
 				F7E3620F20BC0953001C53E1 /* Assets.xcassets */,
 				F7E3621120BC0953001C53E1 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				F7E3620B20BC094D001C53E1 /* ViewController.swift in Sources */,
 				F7E3620920BC094D001C53E1 /* AppDelegate.swift in Sources */,
+				F7E3623720BC0A3E001C53E1 /* KJSwipeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

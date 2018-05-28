@@ -8,11 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, KJSwipeButtonDelegate {
 
+    @IBOutlet weak var viewOfSwitch: KJSwipeButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        viewOfSwitch.thumbOnTintColor = UIColor.darkGray
+        viewOfSwitch.thumbOffTintColor = UIColor.darkGray
+        
+        viewOfSwitch.trackOnTintColor = UIColor.green
+        viewOfSwitch.trackOffTintColor = UIColor.gray
+        
+        viewOfSwitch.thumbDisabledTintColor = UIColor.gray.withAlphaComponent(0.5)
+        viewOfSwitch.trackDisabledTintColor = UIColor.gray.withAlphaComponent(0.5)
+        
+        viewOfSwitch.setStateOfView(isOn: true)
+        
+        viewOfSwitch.delegate = self
+        
+    }
+    
+    func busttonStatusChange(status: Bool) {
+        print("\(status)")
     }
 
     override func didReceiveMemoryWarning() {
