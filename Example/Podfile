@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KJSwipeButtonPod_Example' do
+  pod 'KJSwipeButtonPod', :path => '../'
+
+  target 'KJSwipeButtonPod_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
